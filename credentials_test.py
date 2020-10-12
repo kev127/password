@@ -17,5 +17,11 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_credential.user_name, "user_name")
         self.assertEqual(self.new_credential.password, "password")
 
+    def tearDown(self):
+        """
+        tearDown method that does clean up after each test case has run.
+        """
+        Credential.credential_list = []
+
 
 
