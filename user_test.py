@@ -16,3 +16,9 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_user.first_name, "kelvin")
         self.assertEqual(self.new_user.last_name, "keya")
         self.assertEqual(self.password.password, "@Y0a!yAv")
+
+    def tearDown(self):
+        """
+        tearDown method that does clean up after each test case has run.
+        """
+        User.user_list = []
