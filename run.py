@@ -45,3 +45,35 @@ def delete_credential(credentials):
     Function to delete a Credentials from credentials list
     """
     credentials.delete_credentials()
+
+def main():
+
+    print("welcome to password locker 2020")
+    print('\n')
+    print("Select a short code to guide you:To create a new user type'New':To login to an account'Login' or 'Quit' to exit")
+    short_code = input().lower()
+    print('\n')
+
+    if short_code == 'New':
+        print('New User')
+        created_user == input()
+        print("create password")
+        created_user_password == input()
+        print("Welcome what account would you like to add?")
+        account == input()
+
+        else:
+            print("Login")
+            print("user")
+            entered_user = input()
+            print("enter password")
+            entered_password = input()
+        else:
+            print(f"welcome to your account")
+            print('\n')
+
+
+
+
+
+
