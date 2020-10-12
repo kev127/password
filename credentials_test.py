@@ -30,7 +30,7 @@ class TestCredentials(unittest.TestCase):
         self.new_credential.save_details()
         self.assertEqual(len(Credentials.credentials_list),1)
 
-    def test_save_many_accounts(self):
+    def test_save_multiple_accounts(self):
         '''
         test to check if we can save multiple credentials objects to our credentials list
         '''
