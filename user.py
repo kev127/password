@@ -23,3 +23,9 @@ class User:
         method that returns the class 
         """
         return cls.user_list
+
+    def delete_user(self):
+        '''
+        delete_account method deletes a  saved account from the list
+        '''
+        User.user_list.remove(self)
