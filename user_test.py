@@ -23,12 +23,12 @@ class TestUser(unittest.TestCase):
         """
         User.user_list = []
 
-     def test_save_user(self):
+    def test_save_user(self):
         """
         test case to test if a new user instance has been saved into the User list
         """
-        self.new_user.save_user()
-        self.assertEqual(len(User.user_list),1)
+        self.new_user.save_user_details()
+        self.assertEqual(len(User.user_list), 1)
 
 if __name__ == '__main__':
     unittest.main()
