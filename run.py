@@ -14,3 +14,9 @@ def save_user(user):
     Function to save user
     """
     user.save_user_details()
+
+def display_user():
+    """
+    Function to display existing user
+    """
+    return User.display_user()
