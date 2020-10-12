@@ -50,7 +50,7 @@ def main():
 
     print("welcome to password locker 2020")
     print('\n')
-    print("Select a short code to guide you:To create a new user type'New':To login to an account'Login' or 'Quit' to exit")
+    print("Select a short code to guide you:To create a new user type'New':To login to an account'Login':To display user type:'Display' or 'Quit' to exit")
     short_code = input().lower()
     print('\n')
 
@@ -71,6 +71,29 @@ def main():
         else:
             print(f"welcome to your account")
             print('\n')
+    elif short_code == 'Login':
+        print("welcome")
+        print("Enter user")
+        default_user = input()
+        print("enter password")
+        default_user_password = input()
+        print('\n')
+
+        else:
+            print("Login success")
+            print('\n')
+    elif short_code == 'Display':
+        print("Here is your user accounts")
+        print('\n')
+        for user in display_user():
+            print(f"{user_name} {account} has an account for {account}")
+            print('\n')
+
+            else:
+                print('\n')
+                print("You don't seem to have any existing accounts")
+                print('\n')
+
 
 
 
