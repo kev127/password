@@ -61,13 +61,26 @@ def main():
         created_user_password == input()
         print("Welcome what account would you like to add?")
         account == input()
+        print("confirm password")
+        confirm_password = input()
 
+        while confirm_password:
+            print("enter password")
+            created_user_password = input()
+            print("confirm password")
+            confirm_password = input()
         else:
             print("Login")
             print("user")
             entered_user = input()
             print("enter password")
             entered_password = input()
+        while entered_user:
+            print("wrong user or password")
+            print("user")
+            entered_user = input()
+            print("password")
+            entered_password = input()    
         else:
             print(f"welcome to your account")
             print('\n')
@@ -78,21 +91,19 @@ def main():
         print("enter password")
         default_user_password = input()
         print('\n')
-
+        while entered_user:
+            print("wrong user or password")
+            print("user")
+            entered_user = input()
+            print("password")
+            entered_password = input()    
         else:
             print("Login success")
-            print('\n')
-    elif short_code == 'Display':
-        print("Here is your user accounts")
-        print('\n')
-        for user in display_user():
-            print(f"{user_name} {account} has an account for {account}")
-            print('\n')
+            print('\n')  
+    
 
-            else:
-                print('\n')
-                print("You don't seem to have any existing accounts")
-                print('\n')
+if __name__ == '__main__':
+    main()
 
 
 
