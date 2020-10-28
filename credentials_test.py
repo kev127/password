@@ -57,12 +57,12 @@ class TestCredentials(unittest.TestCase):
         test_credentials.save_credentials()
         found_credentials = Credentials.find_by_name("gmail")
         
-        self.assertEqual(found_credentials.default_username,test_credentials.default_username)
+        self.assertEqual(found_credentials.userName,new_credentials.userName)
         
         test_credentials.save_credentials()
         found_credentials = Credentials.find_by_name("gmail")
         
-        self.assertEqual(found_credentials.default_username,test_credentials.default_username)
+        self.assertEqual(found_credentials.userName,new_credentials.userName)
 
     def test_delete_credential(self):
         """

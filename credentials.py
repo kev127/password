@@ -38,16 +38,16 @@ class Credentials():
                 return credential
 
     @classmethod 
-        def credentials_exists(cls,default_accname):
-            '''
-            Method that checks if credentials exists from the credentials list.
-            Args:
-                number: Account name to search if it exists
-            Returns :
-                Boolean: True or false depending if the credentials exists
-            '''
-            for credentials in cls.credentials_list:
-                if credentials.default_accname == default_accname:
-                return True
+    def credentials_exists(cls,account):
+        '''
+        Method that checks if credentials exists from the credentials list.
+        Args:
+            number: Account name to search if it exists
+        Returns :
+            Boolean: True or false depending if the credentials exists
+        '''
+        for credentials in cls.credentials_list:
+            if credentials.account == account:
+             return True
 
-            return False
+        return False
