@@ -25,7 +25,7 @@ def create_credential(account,userName,password):
     """
     Function to create new user credentials
     """
-    new_credential = Credential(account,username,password)
+    new_credential = Credential(account,userName,password)
     return new_credential
 
 def save_credentials(credentials):
@@ -34,11 +34,24 @@ def save_credentials(credentials):
     """
     credentials. save_details()
 
-def display_accounts_details():
+def display_credentials():
     """
     Function that returns all the saved credential.
     """
     return Credentials.display_credentials()
+
+def find_credentials(default_accname):
+    '''
+    Function that finds credentials by account name
+    '''
+
+    return Credentials.find_by_name(default_accname)
+
+def existing_credentials(default_accname):
+    '''
+    Functiion that checks if an account really exists
+    '''
+    return Credentials.credentials_exists(default_accname)
 
 def delete_credential(credentials):
     """
