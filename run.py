@@ -85,4 +85,26 @@ def main():
             print('-' * 10)
             
             print(f"Congratulations, {last_name} your have successfully created an account \n Your Username is: {created_user_name} \n Your Password is: {confirm_password}")
+
+            while True:
+                    print("Select a short code to navigate through:1 - login to an account :2 - logout an account")
+                    short_code = input().lower()
+                    print('\n')
+                    
+                    if short_code == '2':
+                        print(" Your have succefully logout from your account") 
+                        break
                 
+                    elif short_code == '2':
+                        print("*** Login ***")
+                        print('\n')
+                        print("Enter account name")
+                        default_accname = input()
+                        print("Enter username")
+                        default_username = input()
+
+                         while True:
+                            print("Select a short code to navigate through: 1 - to input your password :2 - to generate your password")
+                            short_code = input().lower()
+                            print('\n')
+                       
