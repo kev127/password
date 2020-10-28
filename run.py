@@ -2,11 +2,11 @@
 from user import User
 from credentials import Credentials
 
-def create_user(fname, username, password ):
+def create_user(first_name, last_name, created_user_name, created_user_password, confirm_password):
     """
     Function to create a new user
     """
-    new_user = User(fname, username, password )
+    new_user = User(first_name, last_name, created_user_name, created_user_password, confirm_password)
     return new_user
 
 def save_user(user):
