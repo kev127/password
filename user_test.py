@@ -15,7 +15,9 @@ class TestUser(unittest.TestCase):
         """
         self.assertEqual(self.new_user.first_name, "kelvin")
         self.assertEqual(self.new_user.last_name, "keya")
+        self.assertEqual(self.new_user.user_name,"kev127")
         self.assertEqual(self.password.password, "@Y0a!yAv")
+        self.assertEqual(self.new_user.confirm_password,"@Y0a!yAv")
 
     def tearDown(self):
         """
