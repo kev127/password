@@ -9,7 +9,7 @@ class Credentials():
         self.account = account
         self.password = password
 
-    def save_details(self):
+    def save_credentials(self):
         """
         method to store a new credential to the credentials list
         """
@@ -36,3 +36,18 @@ class Credentials():
         for credential in cls.credentials_list:
             if credential.account == account:
                 return credential
+
+    @classmethod 
+        def credentials_exists(cls,default_accname):
+            '''
+            Method that checks if credentials exists from the credentials list.
+            Args:
+                number: Account name to search if it exists
+            Returns :
+                Boolean: True or false depending if the credentials exists
+            '''
+            for credentials in cls.credentials_list:
+                if credentials.default_accname == default_accname:
+                return True
+
+            return False
