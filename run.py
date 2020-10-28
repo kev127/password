@@ -67,3 +67,22 @@ def main():
         print("Do you have an account with Password Locker? y/n")
         print("Use a short code: ex - to logout")
         option = input().lower()
+
+        if option == "n":
+            print("Signup to account")
+            print('Enter first name')
+            first_name = input()
+            print('Enter last name')
+            last_name = input()
+            print('Create username')
+            created_user_name = input()
+            print('Create password')
+            created_user_password = input()
+            print('Confirm password')
+            confirm_password = input()
+            
+            save_user( first_name, last_name, created_user_name, created_user_password, confirm_password))
+            print('-' * 10)
+            
+            print(f"Congratulations, {last_name} your have successfully created an account \n Your Username is: {created_user_name} \n Your Password is: {confirm_password}")
+                
