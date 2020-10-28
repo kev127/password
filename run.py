@@ -61,4 +61,9 @@ def delete_credential(credentials):
 
 def main():
 
-   
+   while True: 
+        print("*** Welcome to Password Locker!!! ***")
+        print('\n')
+        print("Do you have an account with Password Locker? y/n")
+        print("Use a short code: ex - to logout")
+        option = input().lower()
