@@ -59,6 +59,13 @@ def delete_credential(credentials):
     """
     credentials.delete_credentials()
 
+def random_password(size):
+    """
+    Function to create a password automatically
+    """
+    password = Credentials.random_password(8)
+    return password
+
 def main():
 
    while True: 
