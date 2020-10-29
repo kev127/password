@@ -6,7 +6,7 @@ def create_user(first_name, last_name, created_user_name, created_user_password,
     """
     Function to create a new user
     """
-    new_user = User(first_name, last_name, created_user_name, created_user_password, confirm_password)
+    new_user = User(first_name,last_name,created_user_name,created_user_password,confirm_password)
     return new_user
 
 def save_user(user):
@@ -81,7 +81,7 @@ def main():
             print('Confirm password')
             confirm_password = input()
             
-            save_user( first_name, last_name, created_user_name, created_user_password, confirm_password)
+            save_user( first_name,last_name,created_user_name,created_user_password,confirm_password)
             print('-' * 10)
             
             print(f"Congratulations, {last_name} your have successfully created an account \n Your Username is: {created_user_name} \n Your Password is: {confirm_password}")
