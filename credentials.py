@@ -57,7 +57,7 @@ class Credentials():
         '''
         Method that generates a  password for the credentials_list
         '''
-        generate_password = ''.join([random.choice(  
+        password = ''.join([random.choice(  
                         string.ascii_lowercase + string.digits)  
                         for n in range(size)])  
-        return generate_password
+        return password

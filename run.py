@@ -13,7 +13,7 @@ def save_user(user):
     """
     Function to save user
     """
-    user.save_user_details()
+    user.save_user()
 
 def display_user():
     """
@@ -32,7 +32,7 @@ def save_credentials(credentials):
     """
     Function to save Credentials to the credentials list
     """
-    credentials. save_details()
+    credentials.save_credentials()
 
 def display_credentials():
     """
@@ -87,8 +87,8 @@ def main():
             created_user_password = input()
             print('Confirm password')
             confirm_password = input()
-            
-            save_user( first_name,last_name,created_user_name,created_user_password,confirm_password)
+            new_user = User(first_name, last_name, created_user_name, created_user_password, confirm_password)
+            save_user(new_user)
             print('-' * 10)
             
             print(f"Congratulations, {last_name} your have successfully created an account \n Your Username is: {created_user_name} \n Your Password is: {confirm_password}")
@@ -150,7 +150,7 @@ def main():
                                         print(password)
                                         break
                                     
-                                save_credential(add_credentials(account, user_name,password))
+                                save_credentials(add_credentials(account, user_name,password))
                                 print('-' * 10)
                                 print(f"Your new credentials: \n Username: {user_name}  \n Account Name: {account}")
                                 print('\n')
@@ -239,8 +239,8 @@ def main():
                                 password = random_password(8)
                                 print(password)
                                 break
-                            
-                    save_credential(add_credentials(account, user_name, password))
+                    new_account = Credentials(user_name, account, password)   
+                    save_credentials(new_account)
                     print('-' * 10)
                     
                     print(f"Welcome {user_name} to your account \n Account Name: {account}")
@@ -271,7 +271,7 @@ def main():
                                         print(password)
                                         break
                                     
-                                save_credential(add_credentials(account, user_name,password))
+                                save_credentials(Credentials(account, user_name,password))
                                 print('-' * 10)
                                 print(f"Your new credentials: \n Username: {user_name}  \n Account Name: {account} \n Password: {password}")
                                 print('\n')
